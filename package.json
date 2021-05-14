@@ -19,6 +19,7 @@
   "homepage": "https://github.com/Deaton879/cse341-node#readme",
   "dependencies": {
     "body-parser": "^1.18.3",
+    "cors": "^2.8.5",
     "ejs": "^2.7.4",
     "express": "^4.17.1",
     "express-handlebars": "^3.0.0",

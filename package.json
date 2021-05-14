@@ -1,8 +1,8 @@
 {
   "name": "cse341-node",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "E-Commerce App | CSE341",
+  "main": "app.js",
   "scripts": {
     "start": "nodemon app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -18,9 +18,15 @@
   },
   "homepage": "https://github.com/Deaton879/cse341-node#readme",
   "dependencies": {
-    "body-parser": "^1.19.0",
-    "ejs": "^3.1.6",
-    "express": "^4.17.1"
+    "body-parser": "^1.18.3",
+    "ejs": "^2.6.1",
+    "express": "^4.16.3",
+    "express-handlebars": "^3.0.0",
+    "mongodb": "^3.6.6",
+    "mongoose": "^5.12.9",
+    "mysql2": "^1.6.1",
+    "pug": "^2.0.3",
+    "sequelize": "^5.0.0-beta.11"
   },
   "devDependencies": {
     "nodemon": "^2.0.7"

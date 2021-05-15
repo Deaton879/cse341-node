@@ -1,68 +1,47 @@
 <%- include('../includes/head.ejs') %>
-    <link rel="stylesheet" href="/css/product.css">
+    <!-- <link rel="stylesheet" href="/css/product.css"> -->
     <link rel="stylesheet" href="/css/project.css">
 </head>
 
 <body>
     <%- include('../includes/header.ejs') %>
     <%- include('../includes/navigation.ejs') %>
-    <!-- <main>
+    <%- include('../includes/overlay.ejs') %>
+    <main>
         <% if (prods.length > 0) { %>
             <div class="grid">
                 <% for (let product of prods) { %>
                     <article class="card">
                         <header class="cardHeader">
-                            <h1 class="cardTitle"><%= product.title %></h1>
-                        </header><hr>
+                            <h1 class="productTitle">
+                                <%= product.title %>
+                            </h1>
+                        </header>
                         <div class="cardContent">
                             <div class="cardImg">
-                                <img src="<%= product.img %>"
-                                    alt="random">
+                                <img src="<%= product.imageUrl %>" alt="<%= product.title %>">
                             </div>
                             <div class="cardInfo">
                                 <div class="cardDetails">
-                                    <h2 class="product__price"><%= product.price %></h2>
-                                    <p class="product__description"><%= product.desc %></p>
+                                    <h2 class="product__price">$
+                                        <%= product.price %>
+                                    </h2>
+                                    <p class="product__description">
+                                        <%= product.description %>
+                                    </p>
                                 </div>
                                 <div class="cardAction">
-                                    <button class="btn" onclick="alerty()">Add to Cart</button>
+                                    <a href="/products/<%= product._id %>" class="btn">Details</a>
+                                    <%- include('../includes/add-to-cart.ejs', {product: product}) %>
                                 </div>
                             </div>
                         </div>
                     </article>
-                    <hr>
-                <% } %>
+                    <% } %>
             </div>
-        <% } else { %>
-            <h1>No Products Found!</h1>
-        <% } %>
-    </main>
-    <script>const alerty = () => alert('Feature coming soon!');</script> -->
-    <main>
-        <% if (prods.length > 0) { %>
-            <div class="grid">
-                <% for (let product of prods) { %>
-                    <article class="card product-item">
-                        <header class="card__header">
-                            <h1 class="product__title"><%= product.title %></h1>
-                        </header>
-                        <div class="card__image">
-                            <img src="<%= product.imageUrl %>"
-                                alt="<%= product.title %>">
-                        </div>
-                        <div class="card__content">
-                            <h2 class="product__price">$<%= product.price %></h2>
-                            <p class="product__description"><%= product.description %></p>
-                        </div>
-                        <div class="card__actions">
-                                <a href="/products/<%= product._id %>" class="btn">Details</a>
-                            <%- include('../includes/add-to-cart.ejs', {product: product}) %>
-                        </div>
-                    </article>
+            <% } else { %>
+                <h1>No Products Found!</h1>
                 <% } %>
-            </div>
-        <% } else { %>
-            <h1>No Products Found!</h1>
-        <% } %>
     </main>
+    
 <%- include('../includes/end.ejs') %>

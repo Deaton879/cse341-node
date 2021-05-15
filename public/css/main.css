@@ -66,7 +66,7 @@ form {
 .main-header__item a:hover,
 .main-header__item a:active,
 .main-header__item a.active {
-  color: #ffeb3b;
+  color: #7bd098;
 }
 
 .mobile-nav {
@@ -154,7 +154,7 @@ form {
 }
 
 .card {
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  box-shadow: inset -1px 0px 4px 4px rgb(0 0 0 / 26%);
 }
 
 .card__header,
@@ -175,6 +175,7 @@ form {
 
 .card__image img {
   width: 100%;
+  border: dashed 1px #636184;
 }
 
 .card__actions {

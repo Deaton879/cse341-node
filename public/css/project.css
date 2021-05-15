@@ -1,6 +1,216 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Sansita:ital,wght@0,400;0,700;0,800;0,900;1,400;1,700;1,800;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Cantarell:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+.cart__item-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin: auto;
+  width: 40rem;
+  max-width: 90%;
+}
+
+.cart__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1rem;
+  -webkit-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+          box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  margin-bottom: 1rem;
+}
+
+.cart__item h1,
+.cart__item h2 {
+  margin-right: 1rem;
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.form-control {
+  margin: 1rem 0;
+}
+
+.form-control label,
+.form-control input,
+.form-control textarea {
+  display: block;
+  width: 100%;
+  margin-bottom: 0.25rem;
+}
+
+.form-control input,
+.form-control textarea {
+  border: 1px solid #a1a1a1;
+  font: inherit;
+  border-radius: 2px;
+}
+
+.form-control input:focus,
+.form-control textarea:focus {
+  outline-color: #00695c;
+}
+
+/* For the add product page form */
+.product-form {
+  padding: 2em;
+}
+
+.product-form .form-control {
+  width: 60%;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.product-form label {
+  font-weight: bold;
+  font-family: 'Sansita';
+}
+
+.product-form button {
+  display: block;
+  -webkit-box-flex: 1;
+      -ms-flex: auto;
+          flex: auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #f8f9fb;
+  font-weight: bold;
+  padding: .5em;
+  border-right: 2px groove #39393a;
+  border-radius: 2px;
+  background-color: rgba(40, 35, 68, 0.7);
+  margin: auto;
+}
+
+.product-form button:hover {
+  background-color: #74c48f;
+  color: black;
+  cursor: pointer;
+}
+
+.orders {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.orders__item h1 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.orders__item {
+  -webkit-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+          box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.orders__products {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.orders__products-item {
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+  border: 1px solid #00695c;
+  color: #00695c;
+}
+
+.product-form {
+  margin: auto;
+  display: block;
+}
+
+.product-item {
+  width: 20rem;
+  max-width: 95%;
+  margin: 1rem;
+}
+
+.product__title {
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.product__price {
+  text-align: center;
+  color: #4d4d4d;
+  margin-bottom: 0.5rem;
+}
+
+.product__description {
+  text-align: center;
+}
+
+#overlay {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+  cursor: pointer;
+}
+
+#text {
+  display: -ms-grid;
+  display: grid;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  background-color: #ccd1d9;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 40px;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  padding: 2rem;
+  border: 5px solid #39393a;
+}
+
+#text h6 {
+  color: #706993;
+  margin: 1rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#text span {
+  color: white;
+  border: .5rem groove azure;
+  padding: 4rem 2rem 4rem 2rem;
+  font-size: large;
+  background-color: rgba(112, 105, 147, 0.5);
+  font-family: cursive;
+}
+
+#text p {
+  font-size: 1.25rem;
+  color: #39393a;
+  margin: 1rem;
+  font-family: monospace;
+}
+
 @media only screen and (min-width: 60rem) {
   main {
     max-width: 900px;
@@ -136,7 +346,7 @@ body {
   background: azure;
 }
 
-main {
+body main {
   margin: auto;
   height: -webkit-max-content;
   height: -moz-max-content;
@@ -158,7 +368,6 @@ h3 {
   text-decoration: underline;
   color: #212121;
   padding-left: 2rem;
-  font-size: x-large;
   margin: auto;
   font-family: 'Raleway', sans-serif;
   text-shadow: -2px 1px 1px #b4dd7f;
@@ -178,7 +387,7 @@ h3 {
 }
 
 header button:hover {
-  background-color: #b4dd7f;
+  background-color: #74c48f;
 }
 
 .titleHeading {
@@ -202,49 +411,6 @@ footer {
   margin: auto;
   font-size: small;
   font-weight: 600;
-}
-
-/* For the add product page form */
-.product-form {
-  padding: 2em;
-}
-
-.product-form .form-control {
-  width: 60%;
-  margin: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.product-form label {
-  font-weight: bold;
-  font-family: 'Sansita';
-}
-
-.product-form button {
-  display: block;
-  -webkit-box-flex: 1;
-      -ms-flex: auto;
-          flex: auto;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: #f8f9fb;
-  font-weight: bold;
-  padding: .5em;
-  border-right: 2px groove #39393a;
-  border-radius: 2px;
-  background-color: rgba(112, 105, 147, 0.7);
-  margin: auto;
-}
-
-.product-form button:hover {
-  background-color: #b4dd7f;
-  color: black;
-  cursor: pointer;
 }
 
 .cardContent {
@@ -272,8 +438,7 @@ footer {
           justify-content: space-between;
 }
 
-.cardContent .cardInfo button {
-  display: block;
+.cardContent .cardInfo a {
   -webkit-box-flex: 1;
       -ms-flex: auto;
           flex: auto;
@@ -287,14 +452,46 @@ footer {
   margin: auto;
 }
 
-.cardContent .cardInfo button:hover {
-  background-color: #b4dd7f;
+.cardContent .cardInfo a:hover {
+  background-color: #74c48f;
   color: black;
   cursor: pointer;
+}
+
+.cardContent img {
+  border: dashed 1px #8f8ea0;
 }
 
 .cardTitle {
   font-family: "Raleway";
   margin-left: 1.5em;
+}
+
+.btn {
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #f8f9fb;
+  font-weight: bold;
+  padding: .5em;
+  border-right: 2px groove #39393a;
+  border-radius: 2px;
+  background-color: rgba(38, 30, 80, 0.7);
+  margin: auto;
+}
+
+.btn:hover {
+  background-color: #7bd098;
+  color: black;
+  cursor: pointer;
+}
+
+.cardHeader {
+  border-bottom: 1.2px dashed rgba(113, 113, 114, 0.9);
+}
+
+.productTitle {
+  font-family: Sansita;
+  margin-left: 1em;
+  font-size: 2rem;
 }
 /*# sourceMappingURL=project.css.map */

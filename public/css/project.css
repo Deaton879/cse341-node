@@ -1,0 +1,300 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sansita:ital,wght@0,400;0,700;0,800;0,900;1,400;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cantarell:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@media only screen and (min-width: 60rem) {
+  main {
+    max-width: 900px;
+    margin: auto;
+  }
+  .nav-container {
+    background: #212121;
+    padding: 4px;
+    width: 100%;
+  }
+  .nav-container .navigation {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: unset;
+    margin: auto;
+  }
+  .nav-container .navigation li {
+    display: block;
+    -webkit-box-flex: 1;
+        -ms-flex: auto;
+            flex: auto;
+    border-right: 2px groove #39393a;
+    border-radius: 2px;
+    background-color: rgba(112, 105, 147, 0.7);
+  }
+  .nav-container .navigation a {
+    padding: .5rem;
+    vertical-align: middle;
+  }
+  .motto {
+    padding: 0.3rem 0 1rem 6rem;
+  }
+  #site-icon {
+    padding: 5px;
+    vertical-align: middle;
+    float: none;
+    max-width: 80px;
+  }
+}
+
+@media only screen and (min-width: 32.5rem) {
+  header {
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  .nav-container {
+    margin-left: auto;
+  }
+  .navigation a:hover {
+    color: #39393a;
+  }
+  .navigation li:hover {
+    background: #b4dd7f;
+    text-shadow: 2px 1px 1px white;
+  }
+  #site-name {
+    padding: 10px;
+    text-align: center;
+    font-size: 3rem;
+  }
+  .titleHeading {
+    font-size: xx-large;
+    font-family: cursive;
+    padding: 2rem 0 0 0;
+  }
+  #site-icon {
+    padding: 5px;
+    vertical-align: middle;
+    float: none;
+  }
+  .headerText {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    padding: 0px 10px 0 13px;
+    margin: auto;
+  }
+  footer {
+    border-bottom: outset;
+  }
+}
+
+header {
+  background-color: rgba(112, 105, 147, 0.4);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: .5rem;
+}
+
+header button {
+  background-color: rgba(112, 105, 147, 0.6);
+}
+
+.headerText {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#active {
+  background: #b4dd7f;
+  text-shadow: 2px 1px 1px white;
+}
+
+#active a {
+  color: #706993;
+  text-shadow: 0px 0px 1px #39393a;
+}
+
+.navigation a {
+  text-decoration: none;
+  text-align: center;
+  padding: 1rem;
+  color: #f8f9fb;
+  font-weight: 700;
+  display: block;
+}
+
+body {
+  background: azure;
+}
+
+main {
+  margin: auto;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  background-color: azure;
+  border-bottom: inset;
+  -webkit-box-shadow: 0px 5px 7px 4px #39393a;
+          box-shadow: 0px 5px 7px 4px #39393a;
+}
+
+h3 {
+  margin: 0;
+  color: #212121;
+  text-indent: 5%;
+  font-size: inherit;
+}
+
+#site-name {
+  text-decoration: underline;
+  color: #212121;
+  padding-left: 2rem;
+  font-size: x-large;
+  margin: auto;
+  font-family: 'Raleway', sans-serif;
+  text-shadow: -2px 1px 1px #b4dd7f;
+}
+
+.motto {
+  display: none;
+  color: #fcd770;
+  padding: 2px;
+  margin: auto;
+  font-size: smaller;
+  font-family: 'Cantarell', sans-serif;
+}
+
+#shoppingCart {
+  max-width: 40px;
+}
+
+header button:hover {
+  background-color: #b4dd7f;
+}
+
+.titleHeading {
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+  margin-top: auto;
+  padding: 1rem 0rem 0 0;
+  font-size: larger;
+}
+
+#site-icon {
+  max-width: 60px;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #212121;
+  color: #f8f9fb;
+  font-family: 'Raleway', sans-serif;
+  margin: auto;
+  font-size: small;
+  font-weight: 600;
+}
+
+/* For the add product page form */
+.product-form {
+  padding: 2em;
+}
+
+.product-form .form-control {
+  width: 60%;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.product-form label {
+  font-weight: bold;
+  font-family: 'Sansita';
+}
+
+.product-form button {
+  display: block;
+  -webkit-box-flex: 1;
+      -ms-flex: auto;
+          flex: auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #f8f9fb;
+  font-weight: bold;
+  padding: .5em;
+  border-right: 2px groove #39393a;
+  border-radius: 2px;
+  background-color: rgba(112, 105, 147, 0.7);
+  margin: auto;
+}
+
+.product-form button:hover {
+  background-color: #b4dd7f;
+  color: black;
+  cursor: pointer;
+}
+
+.cardContent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: .5em;
+  margin: auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.cardContent .cardInfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 1em;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.cardContent .cardInfo button {
+  display: block;
+  -webkit-box-flex: 1;
+      -ms-flex: auto;
+          flex: auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #f8f9fb;
+  font-weight: bold;
+  padding: .5em;
+  border-right: 2px groove #39393a;
+  border-radius: 2px;
+  background-color: rgba(112, 105, 147, 0.7);
+  margin: auto;
+}
+
+.cardContent .cardInfo button:hover {
+  background-color: #b4dd7f;
+  color: black;
+  cursor: pointer;
+}
+
+.cardTitle {
+  font-family: "Raleway";
+  margin-left: 1.5em;
+}
+/*# sourceMappingURL=project.css.map */

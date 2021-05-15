@@ -1,0 +1,9 @@
+[
+    {"title":"Product 1", "price": "$11.99", "desc":"This is a placeholder for Product 1", "img":"https://picsum.photos/200/300"},
+    {"title":"Product 2", "price": "$12.99", "desc":"This is a placeholder for Product 2", "img":"https://picsum.photos/200/300"},
+    {"title":"Product 3", "price": "$13.99", "desc":"This is a placeholder for Product 3", "img":"https://picsum.photos/200/300"},
+    {"title":"Product 4", "price": "$14.99", "desc":"This is a placeholder for Product 4", "img":"https://picsum.photos/200/300"},
+    {"title":"Product 5", "price": "$15.99", "desc":"This is a placeholder for Product 5", "img":"https://picsum.photos/200/300"},
+    {"title":"Product 6", "price": "$16.99", "desc":"This is a placeholder for Product 6", "img":"https://picsum.photos/200/300"},
+    {"title":"Product 7", "price": "$17.99", "desc":"This is a placeholder for Product 7", "img":"https://picsum.photos/200/300"}
+]

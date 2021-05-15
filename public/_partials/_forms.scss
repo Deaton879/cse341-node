@@ -1,0 +1,57 @@
+.form-control {
+  margin: 1rem 0;
+}
+
+.form-control label,
+.form-control input,
+.form-control textarea {
+  display: block;
+  width: 100%;
+  margin-bottom: 0.25rem;
+}
+
+.form-control input,
+.form-control textarea {
+  border: 1px solid #a1a1a1;
+  font: inherit;
+  border-radius: 2px;
+}
+
+.form-control input:focus,
+.form-control textarea:focus {
+  outline-color: #00695c;
+}
+
+/* For the add product page form */
+.product-form {
+  padding: 2em;
+
+  .form-control {
+      width: 60%;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      
+  }
+  label {
+      font-weight: bold;
+      font-family: 'Sansita';
+  }
+  button {
+    display: block;
+    flex: auto;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #f8f9fb;
+    font-weight: bold;
+    padding: .5em;
+    border-right: 2px groove rgba(57,57,58,1);
+    border-radius: 2px;
+    background-color:  rgba(40,35,68,.7);
+    margin: auto; 
+  }
+  button:hover {
+    background-color: rgb(116, 196, 143);
+    color: black;
+    cursor: pointer;
+  }
+}  

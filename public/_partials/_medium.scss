@@ -1,0 +1,49 @@
+@media only screen and (min-width: 32.5rem) {
+
+    
+    header {
+        justify-content: space-evenly;
+    }
+    
+    .nav-container {
+        margin-left: auto;
+    }
+    .navigation {
+
+        a:hover {
+            color: rgba(57,57,58,1);
+        }
+        li:hover {
+            background: rgba(180,221,127, 1);
+            text-shadow: 2px 1px 1px white;
+        }
+    } 
+
+    #site-name {
+        padding: 10px;  
+        text-align: center;
+        font-size: 3rem;
+    }
+
+    .titleHeading {
+        font-size: xx-large;
+        font-family: cursive;
+        padding: 2rem 0 0 0;
+    }
+
+    #site-icon {
+        padding: 5px;
+        vertical-align: middle;
+        float: none;
+    }
+    
+    .headerText {
+        display: inline-flex;
+        padding: 0px 10px 0 13px;
+        margin: auto;
+    }
+
+    footer {
+        border-bottom: outset;
+    }
+}

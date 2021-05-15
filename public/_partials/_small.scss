@@ -1,0 +1,219 @@
+  
+header {
+    background-color: rgba(112,105,147,.4);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: .5rem;
+
+    button {
+        background-color: rgba(112,105,147,.6);
+    }
+    
+
+}
+.headerText {
+    display: flex;
+}
+
+
+#active {
+    background: rgba(180,221,127, 1);
+    text-shadow: 2px 1px 1px white;
+    
+    a {
+        color: rgba(112,105,147,1);
+        text-shadow: 0px 0px 1px rgba(57,57,58, 1);
+    }
+}
+
+
+// .navigation {
+//     list-style-type: none;
+//     display: block;
+//     padding: 0;
+//     height: auto;
+//     margin: 0;
+//     font-family: 'Raleway', sans-serif;
+// }
+
+// .navigation li {
+//     display: none;
+//     font-family: 'Raleway', sans-serif;
+//     font-size: large;
+//     background-color:  rgba(112,105,147,1);
+//     border: 1px solid rgba(57,57,58,.7);
+// }
+
+// .responsive li {
+//     display: block;
+//     border-bottom: 1px solid white;
+//     background-color:  rgba(112,105,147,1);
+//     border: 1px solid rgba(57,57,58,.7);
+// }
+
+// .navigation li:first-child {
+//     display: block;
+// }
+
+// .responsive li:first-child {
+//     background-color:  rgba(112,105,147,.7);
+// }
+
+// .responsive li:first-child a {
+//     color: #f8f9fb;
+// }
+
+.navigation a {
+    text-decoration: none;
+    text-align: center;
+    padding: 1rem;
+    color: #f8f9fb;
+    font-weight: 700;
+	display: block;
+}
+
+
+body {
+    background: azure;
+
+    main {
+        margin: auto;
+        height: max-content;
+        background-color: azure;
+        border-bottom: inset;
+        box-shadow: 0px 5px 7px 4px rgba(57,57,58, 1);
+    }
+}
+
+
+
+h3 {
+    margin: 0;
+    color: #212121;
+    text-indent: 5%;
+    font-size: inherit;
+}
+
+#site-name {
+    text-decoration: underline;
+    color:#212121;
+    padding-left: 2rem;
+    margin: auto;  
+    font-family: 'Raleway', sans-serif;
+    text-shadow: -2px 1px 1px rgba(180,221,127, 1);
+
+}
+
+.motto {
+    display: none;
+    color: rgba(252,215,112,1);
+    padding: 2px;;
+    margin:auto;
+    font-size: smaller;
+    font-family: 'Cantarell', sans-serif;
+}
+
+#shoppingCart {
+    max-width: 40px;
+}
+
+header button:hover {
+    background-color: rgb(116, 196, 143);
+}
+
+.titleHeading {
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    margin-top: auto;
+    padding: 1rem 0rem 0 0;
+    font-size: larger;
+}
+
+#site-icon {
+    max-width: 60px;
+}
+
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #212121;
+    color: #f8f9fb;
+    font-family: 'Raleway', sans-serif;
+    margin: auto;
+    font-size: small;
+    font-weight: 600;
+}
+ 
+  
+  
+
+  .cardContent {
+      display: flex;
+      padding: .5em;
+      margin: auto;
+      justify-content:center; 
+
+      
+      .cardInfo {
+            display: flex;
+            flex-direction: column;
+            padding: 1em;
+            justify-content: space-between;    
+            a {
+                //display: block;
+                flex: auto;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                color: #f8f9fb;
+                font-weight: bold;
+                padding: .5em;
+                border-right: 2px groove rgba(57,57,58,1);
+                border-radius: 2px;
+                background-color:  rgba(112,105,147,.7);
+                margin: auto; 
+              }
+              a:hover {
+                background-color: rgb(116, 196, 143);
+                color: black;
+                cursor: pointer;
+              }
+      }
+
+      img {
+        border: dashed 1px #8f8ea0;
+      }
+  }
+
+  .cardTitle {
+    font-family: "Raleway";
+    margin-left: 1.5em;
+}
+
+.btn {
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #f8f9fb;
+    font-weight: bold;
+    padding: .5em;
+    border-right: 2px groove rgba(57,57,58,1);
+    border-radius: 2px;
+    background-color:  rgba(38, 30, 80, 0.7);
+    margin: auto; 
+}
+.btn:hover {
+    background-color: #7bd098;
+    color: black;
+    cursor: pointer;
+  }
+  
+.cardHeader {
+    border-bottom: 1.2px dashed rgba(113, 113, 114, 0.9);
+}
+
+.productTitle {
+    font-family: Sansita;
+    margin-left: 1em;
+    font-size: 2rem;
+}

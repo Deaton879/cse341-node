@@ -1,0 +1,50 @@
+@media only screen and (min-width: 60rem) {
+
+    main{
+        max-width: 900px;
+        margin: auto;
+    }
+
+    .nav-container {
+        background: #212121;
+        padding: 4px;
+        width: 100%;
+
+        .navigation {
+            display: flex;
+            padding: unset;
+            margin: auto;
+
+            // li:first-child {
+            //     display: none;
+            // }
+
+            li {
+                display: block;
+                flex: auto;
+                border-right: 2px groove rgba(57,57,58,1);
+                border-radius: 2px;
+                background-color:  rgba(112,105,147,.7); 
+            }
+
+            a {
+                padding: .5rem;
+                vertical-align: middle;
+            }
+        }
+    }
+
+
+    .motto {
+        padding: 0.3rem 0 1rem 6rem;
+    }
+
+
+    #site-icon {
+        padding: 5px;
+        vertical-align: middle;
+        float: none;
+        max-width: 80px;
+    }
+
+}

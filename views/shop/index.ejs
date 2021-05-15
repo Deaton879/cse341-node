@@ -1,10 +1,43 @@
 <%- include('../includes/head.ejs') %>
     <link rel="stylesheet" href="/css/product.css">
+    <link rel="stylesheet" href="/css/project.css">
 </head>
 
 <body>
+    <%- include('../includes/header.ejs') %>
     <%- include('../includes/navigation.ejs') %>
-
+    <!-- <main>
+        <% if (prods.length > 0) { %>
+            <div class="grid">
+                <% for (let product of prods) { %>
+                    <article class="card">
+                        <header class="cardHeader">
+                            <h1 class="cardTitle"><%= product.title %></h1>
+                        </header><hr>
+                        <div class="cardContent">
+                            <div class="cardImg">
+                                <img src="<%= product.img %>"
+                                    alt="random">
+                            </div>
+                            <div class="cardInfo">
+                                <div class="cardDetails">
+                                    <h2 class="product__price"><%= product.price %></h2>
+                                    <p class="product__description"><%= product.desc %></p>
+                                </div>
+                                <div class="cardAction">
+                                    <button class="btn" onclick="alerty()">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <hr>
+                <% } %>
+            </div>
+        <% } else { %>
+            <h1>No Products Found!</h1>
+        <% } %>
+    </main>
+    <script>const alerty = () => alert('Feature coming soon!');</script> -->
     <main>
         <% if (prods.length > 0) { %>
             <div class="grid">

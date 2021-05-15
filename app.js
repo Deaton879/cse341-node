@@ -65,6 +65,7 @@ mongoose
           }
         });
         user.save();
+        console.log(result);
       }
     });
     app.listen(PORT);

@@ -1,8 +1,18 @@
 <header>
     <section class="headerText">
         <a href="/"><img id="site-icon" src="/images/godzilla.png" alt="site logo"></a>
-        <h1 id="site-name">Shopzilla.com</h1>
-        <div class="motto">Shop 'til you drop!</div>
+        <h1 id="site-name">Shopzilla.com</h1>    
     </section>
-    <button type="button" onclick="on()"><img id="shoppingCart" src="/images/cart.png" alt="shopping cart"></button>
+    <div class="welcome">
+    <% if (isAuthenticated) { %>
+        
+            <span>Welcome, <%= name %></span>
+            <form action="/logout" method="post">
+                <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+                <button type="submit" >Logout</button>
+            </form>
+       
+    <% } %>
+        <button type="button" onclick="on()"><img id="shoppingCart" src="/images/cart.png" alt="shopping cart"></button>
+    </div>
 </header>

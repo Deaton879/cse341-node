@@ -211,6 +211,13 @@
   font-family: monospace;
 }
 
+.login-form {
+  width: 20rem;
+  max-width: 90%;
+  margin: auto;
+  display: block;
+}
+
 @media only screen and (min-width: 60rem) {
   main {
     max-width: 900px;
@@ -411,6 +418,8 @@ footer {
   margin: auto;
   font-size: small;
   font-weight: 600;
+  width: 100%;
+  bottom: 0;
 }
 
 .cardContent {
@@ -419,9 +428,33 @@ footer {
   display: flex;
   padding: .5em;
   margin: auto;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  text-align: right;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+@media only screen and (max-width: 32.5rem) {
+  .cardContent {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+  }
+}
+
+.cardContent .cardDetails {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align-last: end;
 }
 
 .cardContent .cardInfo {
@@ -458,8 +491,12 @@ footer {
   cursor: pointer;
 }
 
-.cardContent img {
+.cardContent .cardInfo img {
   border: dashed 1px #8f8ea0;
+}
+
+.cardContent .cardAction {
+  text-align: right;
 }
 
 .cardTitle {
@@ -493,5 +530,21 @@ footer {
   font-family: Sansita;
   margin-left: 1em;
   font-size: 2rem;
+}
+
+.welcome {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: end;
+}
+
+.welcome button {
+  width: 50%;
+  margin: 9px 0 0 65px;
 }
 /*# sourceMappingURL=project.css.map */

@@ -6,6 +6,18 @@
 @import "../_partials/orders";
 @import "../_partials/products";
 @import "../_partials/overlay";
+@import "../_partials/auth";
 @import "../_partials/large";
 @import "../_partials/medium";
 @import "../_partials/small";
+
+.welcome {
+    display: flex;
+    flex-direction: column;
+    text-align: end;
+    button {
+        width: 50%;
+        margin: 9px 0 0 65px;
+        
+    }
+}

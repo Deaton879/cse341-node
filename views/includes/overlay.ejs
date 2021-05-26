@@ -1,11 +1,17 @@
 <!--Overlay for the cart-->
-<div id="overlay" onclick="off()">
-    <div id="text">
-        <h6>Your Cart</h6>
-        <p>Items: 0</p>
-        <h6>Contents:</h6>
-        <span>Your Cart Is Empty!</span>
-        <p>Subtotal: $0.00</p>
-        <p>Tax: $0.00</p>
+<% if (isAuthenticated) { %>
+    <div id="overlay" onclick="off()">
+        <div id="text">
+            <h6>Your Cart</h6>
+            <p id="overlay__item-total">Items: <%= cartCount %></p>
+            <div>
+                <p id="overlay__empty-list"></p>
+                <ul id="overlay__item-list"></ul>
+            </div>
+            <p id="overlay__subtotal"></p>
+            <p id="overlay__tax"></p>
+            <button type="button" ><a href="/cart" class="btn">Go to Cart</a></button>
+            
+        </div>
     </div>
-</div>
+<% } %>

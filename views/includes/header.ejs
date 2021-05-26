@@ -1,18 +1,16 @@
 <header>
     <section class="headerText">
-        <a href="/"><img id="site-icon" src="/images/godzilla.png" alt="site logo"></a>
+        <a href="/" title="Back to shop page"><img id="site-icon" src="/images/godzilla.png" alt="site logo"></a>
         <h1 id="site-name">Shopzilla.com</h1>    
     </section>
-    <div class="welcome">
     <% if (isAuthenticated) { %>
-        
-            <span>Welcome, <%= name %></span>
+        <div class="welcome">
+            <span><a href="/account" class="btn" title="Go to account page">Welcome, <%= firstName %></a></span>
             <form action="/logout" method="post">
                 <input type="hidden" name="_csrf" value="<%= csrfToken %>">
-                <button type="submit" >Logout</button>
+                <button type="submit" title="Logout of your account" class="btn">Logout</button>
             </form>
-       
+            <button type="button" onclick="on()"><img id="shoppingCart" src="/images/cart.png" alt="shopping cart"></button>
+        </div>
     <% } %>
-        <button type="button" onclick="on()"><img id="shoppingCart" src="/images/cart.png" alt="shopping cart"></button>
-    </div>
 </header>

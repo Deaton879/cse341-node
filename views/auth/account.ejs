@@ -1,0 +1,17 @@
+<%- include('../includes/head.ejs') %>
+<link rel="stylesheet" href="/css/project.css">
+<link rel="stylesheet" href="/css/auth.css">
+</head>
+
+<body>
+
+    <%- include('../includes/header.ejs') %>
+    <%- include('../includes/navigation.ejs') %>
+
+    <main>
+        <h2>Account Info</h2>
+        <p>Name: <%= name %></p>
+        <p>Email: <%= email %> </p>
+        <p>Password: <a href="/reset">Update Password</a> </p>
+    </main>
+<%- include('../includes/end.ejs') %>

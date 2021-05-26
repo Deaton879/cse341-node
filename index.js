@@ -28,6 +28,7 @@ app.set('views', 'views');
 const adminRoutes = require('./routes/admin');
 const shopRoutes = require('./routes/shop');
 const authRoutes = require('./routes/auth');
+const product = require('./models/product');
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
@@ -47,9 +48,21 @@ app.use((req, res, next) => {
     return next();
   }
   User.findById(req.session.user._id)
+    
     .then(user => {
       req.user = user;
-      res.locals.name = req.user.firstName;
+      res.locals.firstName = user.firstName;
+      res.locals.lastName = user.lastName;
+      res.locals.name = user.firstName + " " + user.lastName;
+      res.locals.cart = user.cart.items;
+      res.locals.email = user.email;
+      let count = 0;
+      
+      user.cart.items.forEach(x => {
+        count += x.quantity;
+      });
+
+      res.locals.cartCount = count;
       next();
     })
     .catch(err => console.log(err));
@@ -58,7 +71,6 @@ app.use((req, res, next) => {
 app.use((req, res, next) => {
   res.locals.isAuthenticated = req.session.isLoggedIn;
   res.locals.csrfToken = req.csrfToken();
-  
   next();
 });
 

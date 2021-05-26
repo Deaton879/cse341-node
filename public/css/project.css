@@ -153,8 +153,14 @@
   margin-bottom: 0.5rem;
 }
 
-.product__description {
-  text-align: center;
+.cardImg {
+  display: inline-block;
+  max-width: 200px;
+  max-height: 350px;
+}
+
+.cardImg .bookImg {
+  max-width: 100%;
 }
 
 #overlay {
@@ -169,6 +175,10 @@
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 2;
   cursor: pointer;
+}
+
+#overlay a {
+  text-decoration: none;
 }
 
 #text {
@@ -432,8 +442,6 @@ footer {
       -ms-flex-pack: justify;
           justify-content: space-between;
   text-align: right;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
 }
 
 @media only screen and (max-width: 32.5rem) {
@@ -544,7 +552,7 @@ footer {
 }
 
 .welcome button {
-  width: 50%;
   margin: 9px 0 0 65px;
+  cursor: pointer;
 }
 /*# sourceMappingURL=project.css.map */

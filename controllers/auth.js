@@ -166,7 +166,7 @@ exports.postReset = (req, res, next) => {
         html: `
           <p>Your request to change your password has been received.</p>
           <p>If you did not request a change, please disregard this message</p>
-          <p>Click this <a href="#${token}">link</a> to set a new password.</p>
+          <p>Click this <a href="https://shrouded-dawn-21361.herokuapp.com/reset/${token}">link</a> to set a new password.</p>
         `
       };
       req.flash('error', "A link has been sent to your email to reset the password.");

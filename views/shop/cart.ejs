@@ -5,21 +5,34 @@
     <body>
         <%- include('../includes/header.ejs') %>
         <%- include('../includes/navigation.ejs') %>
+        <%- include('../includes/overlay.ejs') %>
         <main>
             <% if (products.length > 0) { %>
                 <ul class="cart__item-list">
                     <% products.forEach(p => { %>
                         <li class="cart__item">
                             <h1><%= p.productId.title %></h1>
-                            <h2>Quantity: <%= p.quantity %></h2>
+                            <p>Qty: <%= p.quantity %></p>
+                            <!-- -->
                             <form action="/cart-delete-item" method="POST">
+                                <select name="quantity">
+                                    <option value="0">0</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                </select>
+                                <input type="hidden" name="price" value="<%= p.price %>">
                                 <input type="hidden" value="<%= p.productId._id %>" name="productId">
                                 <input type="hidden" name="_csrf" value="<%= csrfToken %>">
-                                <button class="btn danger" type="submit">Delete</button>
+                                <button class="btn danger" type="submit">Update</button>
                             </form>
+                            <h2>Price: $ <%= p.total %></h2>
                         </li>
                     <% }) %>
                 </ul>
+                
                 <hr>
                 <div class="centered">
                     <form action="/create-order" method="POST">

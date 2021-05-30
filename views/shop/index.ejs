@@ -7,43 +7,11 @@
     <%- include('../includes/header.ejs') %>
     <%- include('../includes/navigation.ejs') %>
     <%- include('../includes/overlay.ejs') %>
-    <main>
-        <% if (prods.length > 0) { %>
-            <div class="grid">
-                <% for (let product of prods) { %>
-                    <article class="card">
-                        <header class="cardHeader">
-                            <h1 class="productTitle">
-                                <%= product.title %>
-                            </h1>
-                        </header>
-                        <div class="cardContent">
-                            <div class="cardImg">
-                                <img src="<%= product.imageUrl %>" alt="<%= product.title %>" class="bookImg">
-                            </div>
-                            <div class="cardInfo">
-                                <div class="cardDetails">
-                                    <h2 class="product__price">$
-                                        <%= product.price %>
-                                    </h2>
-                                    <p class="product__description">
-                                        <%= product.description %>
-                                    </p>
-                                </div>
-                                <div class="cardAction">
-                                    <a href="/products/<%= product._id %>" class="btn">Details</a>
-                                    <% if (isAuthenticated) { %>
-                                        <%- include('../includes/add-to-cart.ejs', {product: product}) %>
-                                    <% } %>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-                <% } %>
-            </div>
-            <% } else { %>
-                <h1>No Products Found!</h1>
-        <% } %>
+    <main id="index__main">
+        <h1>Welcome to <b></b>Shopzilla!</h1>
+        <h3>Your one-stop-shop for all of your book you'd ever want to buy.</h3>
+        <a href="/products"><img  src="/images/godzilla.png" alt="Site Mascot" title="Click me to see the books!"></a>
+        
     </main>
     
 <%- include('../includes/end.ejs') %>

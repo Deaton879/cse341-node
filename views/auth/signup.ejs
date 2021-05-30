@@ -12,27 +12,51 @@
         <% if (errorMessage) { %>
             <div class="user-message user-message--error" style="color:red; text-align: center;"><%= errorMessage %></div>
         <% } %>
-        <form class="login-form" action="/signup" method="POST">
+        <form class="login-form" action="/signup" method="POST" novalidate>
             <div class="form-control">
                 <label for="firstName">First Name</label>
-                <input type="text" name="firstName" id="firstName">
+                <input 
+                    class="<%= validationErrors.find(e => e.param === 'firstName') ? 'invalid' : '' %>"
+                    type="text" 
+                    name="firstName" 
+                    id="firstName" 
+                    value="<%= oldInput.firstName %>">
             </div>
             <div class="form-control">
                 <label for="lastName">Last Name</label>
-                <input type="text" name="lastName" id="lastName">
+                <input 
+                    class="<%= validationErrors.find(e => e.param === 'lastName') ? 'invalid' : '' %>"
+                    type="lastName" 
+                    name="lastName" 
+                    id="lastName" 
+                    value="<%= oldInput.lastName %>">
             </div>
             <div class="form-control">
                 <label for="email">E-Mail</label>
-                <input type="email" name="email" id="email">
+                <input 
+                    class="<%= validationErrors.find(e => e.param === 'email') ? 'invalid' : '' %>"
+                    type="email" 
+                    name="email" 
+                    id="email" 
+                    value="<%= oldInput.email %>">
             </div>
             <div class="form-control">
                 <label for="password">Password</label>
-                <input type="password" name="password" id="password">
+                <input 
+                    class="<%= validationErrors.find(e => e.param === 'password') ? 'invalid' : '' %>"
+                    type="password" 
+                    name="password" 
+                    id="password" 
+                    value="<%= oldInput.password %>">
             </div>
             <div class="form-control">
                 <label for="confirmPassword">Confirm Password</label>
-                <input type="password" name="confirmPassword" id="confirmPassword">
-            </div>
+                <input 
+                    class="<%= validationErrors.find(e => e.param === 'confirmPassword') ? 'invalid' : '' %>"
+                    type="password" 
+                    name="confirmPassword" 
+                    id="confirmPassword" 
+                    value="<%= oldInput.confirmPassword %>">
             <input type="hidden" name="_csrf" value="<%= csrfToken %>">
             <button class="btn" type="submit">Signup</button>
         </form>
